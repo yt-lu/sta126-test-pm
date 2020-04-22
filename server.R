@@ -104,7 +104,7 @@ server <- function(input, output){
                  "<li>Each row represents the regular gas price ($/gal) from one gas station</li>"
                  )
     
-    if(!is.na(input$id) & (input$id >7000 | input$id <= 3000)){
+    if(!is.na(input$id) & (input$id >=7000 | input$id < 2000)){
       out <- paste(out, 
                    "<li>Find the <font color=\"#FF0000\"><b>", cl(), "%</b></font> confidence interval for the true average price of regular gas.</li>"
                    )
@@ -122,7 +122,7 @@ server <- function(input, output){
                  "<li><q>Econmy</q> means people are more concerned that the stay-at-home restrictions would hurt the U.S. economy.</li>"
                  )
     
-    if(!is.na(input$id) & (input$id <=7000 & input$id > 3000)){
+    if(!is.na(input$id) & (input$id <7000 & input$id >= 2000)){
       out <- paste(out, 
                    "<li>Find the <font color=\"#FF0000\"><b>", cl(), "%</b></font> confidence interval for the true proportion of people who are more concerned that relaxing stay-at-home restrictions would lead to more COVID-19 deaths.</li>"
       )
